@@ -15,6 +15,7 @@ import session from 'express-session';
 import memoryStore from 'memorystore';
 import dotenv from 'dotenv';
 import base64url from 'base64url';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -69,6 +70,13 @@ app.use(
     }),
   }),
 );
+
+const corsOptions = {
+  origin: ['http://localhost:3000'],
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 /**
  * If the words "metadata statements" mean anything to you, you'll want to enable this route. It

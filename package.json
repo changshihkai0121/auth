@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@simplewebauthn/server": "^7.2.0",
+    "@types/cors": "^2.8.13",
     "axios": "^1.4.0",
     "base64url": "^3.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
